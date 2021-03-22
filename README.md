@@ -95,6 +95,14 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 | ------------- | ------------- | ------------- |
 | PostID        | String        | unique ID for each user |
 | author        | CPointer to User | Book post author |
+| image | File | Book post image(s) |
+| description | String | Book description made by user on post |
+| createdAt | DateTime | Time the post was created |
+| updatedAt | DateTime | Time the post was updated | 
+| price | String | Price of the book made by user | 
+| department | String | department the book belongs to |
+| sold | Boolean | True if book is sold. False otherwise |
+| saved | Boolean | True if user saves a post | 
 
 
 
