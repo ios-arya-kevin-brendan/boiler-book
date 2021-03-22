@@ -10,16 +10,16 @@
 
 ## Overview
 ### Description
-[Description of your app]
+This app is a buying and selling app for textbooks between students at Purdue University. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Buying/Selling
+- **Mobile:** This app would be primarily developed for mobile but will be just as viable on a computer. 
+- **Story:** This makes it easier for students to find cheaper textbooks instead of buying from the original publisher. 
+- **Market:** Purdue Students 
+- **Habit:** This app would be used every semester when students enroll in new classes.
+- **Scope:** First we would create an app where buyers and sellers can see how far they are from each other, sellers can rate the quality of the textbook and other aspects regarding their experience, and a chat option. We could broaden this idea by expanding it to different colleges and implementing an in-app purchase option. 
 
 ## Product Spec
 
