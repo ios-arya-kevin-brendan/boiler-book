@@ -84,7 +84,6 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 * Profile -> NONE
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="https://imgur.com/4UouzWw.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
