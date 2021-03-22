@@ -110,12 +110,18 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 ### Networking
 - [Add list of network requests by screen ]
 * Login Screen
+  * (GET) Log in user
+  * (POST) Reset Password
 * Registration Screen
+  * (POST) Sign up user
 * Search
-* Listing
+* Listing (Home Feed)
+  * (READ/GET) Query posts to populate the feed
+  * (PUT) Update saved post
 * Posting Page
-* Creation
+  * (Create/POST) Create a new post object
 * Message Overview
+  * (READ/GET) Query users that you have previously messaged
 * Message
 * Profile
 
