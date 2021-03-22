@@ -91,6 +91,9 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 ### [BONUS] Interactive Prototype
 
 ## Schema 
+
+### Models
+
 | Property      | Type          | Description   |
 | ------------- | ------------- | ------------- |
 | PostID        | String        | unique ID for each user |
@@ -104,10 +107,6 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 | sold | Boolean | True if book is sold. False otherwise |
 | saved | Boolean | True if user saves a post | 
 
-
-
-### Models
-[Add table of models]
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
