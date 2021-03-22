@@ -28,21 +28,29 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 **Required Must-have Stories**
 
 * [fill in your required user stories here]
-* ...
+* User can login
+* User can create a new account
+* User can see the main feed with all listings
+* User can post their book to the feed (picture and comment)
+* User can search for a book
+* User can see rough location of seller/book
+* Sold books marked as sold
 
 **Optional Nice-to-have Stories**
 
 * [fill in your required user stories here]
-* ...
+* Users can chat with each other for buying/selling
+* 
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login Screen
+   * User can login
+* Registration Screen
+   * User can register for a new account
+* Stream
+* Creation
+* Search
 
 ### 3. Navigation
 
