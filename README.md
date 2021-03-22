@@ -46,38 +46,46 @@ This app is a buying and selling app for textbooks between students at Purdue Un
    * User can login
 * Registration Screen
    * User can register for a new account
-* Stream
-   * User can view a feed of posted listings
+* Search
+   * User can search for a certain book
+* Listing
+   * user can view the listing for a book
 * Posting Page
    * User can click on an item on the feed to see the description/comment (see more details about the book)
 * Creation
    * User can post a new book listing to the feed
-* Search
-   * User can search for a certain book
+* Message Overview
+   * User can look at messages with people
 * Message
+   * User can message the selected user
+* Profile
+   * User can edit and view profile
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Home Feed (see all listings aka Stream) 
 * Search for a book
-* Post a book
+* Post a listing
+* profile
+* messages
 
 **Flow Navigation** (Screen to Screen)
 
-* Login Screen -> Home 
-* Registration Screen -> Home
-* Stream Screen -> Posting Page
+* Login Screen -> tab navigation (search), Registration Screen
+* Registration Screen -> tab navigation (search)
+* search -> Listing
+* Listing -> Posting Page
+* Posing Page -> Message
 * Creation 
-  * Home after posting
+  * Search after posting
   * Navigate to camera/photo library
-* Search -> NONE
-* Message -> NONE
+* Message Overview -> Message
+* Profile -> NONE
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://imgur.com/4UouzWw.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
