@@ -91,7 +91,13 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+| Property      | Type          | Description   |
+| ------------- | ------------- | ------------- |
+| PostID        | String        | unique ID for each user |
+| author        | CPointer to User | Book post author |
+
+
+
 ### Models
 [Add table of models]
 ### Networking
