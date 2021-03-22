@@ -27,7 +27,6 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
 * User can login
 * User can create a new account
 * User can see the main feed with all listings
@@ -38,7 +37,6 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
 * Users can chat with each other for buying/selling
 * 
 
@@ -49,25 +47,33 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 * Registration Screen
    * User can register for a new account
 * Stream
+   * User can view a feed of posted listings
+* Posting Page
+   * User can click on an item on the feed to see the description/comment (see more details about the book)
 * Creation
+   * User can post a new book listing to the feed
 * Search
+   * User can search for a certain book
+* Message
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Home Feed (see all listings aka Stream) 
+* Search for a book
+* Post a book
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login Screen -> Home 
+* Registration Screen -> Home
+* Stream Screen -> Posting Page
+* Creation 
+  * Home after posting
+  * Navigate to camera/photo library
+* Search -> NONE
+* Message -> NONE
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
