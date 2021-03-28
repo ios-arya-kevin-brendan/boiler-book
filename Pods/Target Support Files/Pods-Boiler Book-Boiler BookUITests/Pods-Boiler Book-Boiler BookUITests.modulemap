@@ -1,0 +1,6 @@
+framework module Pods_Boiler_Book_Boiler_BookUITests {
+  umbrella header "Pods-Boiler Book-Boiler BookUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
