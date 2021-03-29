@@ -50,7 +50,7 @@ This app is a buying and selling app for textbooks between students at Purdue Un
    * User can search for a certain book
 * Listing
    * user can view the listing for a book
-* Posting Page
+* Posting Page (Home/Main page)
    * User can click on an item on the feed to see the description/comment (see more details about the book)
 * Creation
    * User can post a new book listing to the feed
