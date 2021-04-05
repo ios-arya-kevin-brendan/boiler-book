@@ -1,3 +1,13 @@
+4/4 week sprint
+Kevin
+-Finish profile
+-build messages
+Brendan
+-Posting
+Arya
+-Listing
+
+
 ===
 
 # Boiler Book
