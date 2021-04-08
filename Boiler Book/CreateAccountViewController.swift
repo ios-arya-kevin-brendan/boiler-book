@@ -26,22 +26,25 @@ class CreateAccountController: UIViewController {
 
         
         //setting up textbox/buttons
-        emailField.setCorner(radius: 29)
+        emailField.setCorner(radius: emailField.frame.height/2)
         emailField.setBorder(width: 3, color: UIColor.brown)
         emailField.setView(.left, space: 45)
         
-        nameField.setCorner(radius: 29)
+        nameField.setCorner(radius: nameField.frame.height/2)
         nameField.setBorder(width: 3, color: UIColor.brown)
         nameField.setView(.left, space: 45)
         
-        passwordField.setCorner(radius: 29)
+        passwordField.setCorner(radius: passwordField.frame.height/2)
         passwordField.setBorder(width: 3, color: UIColor.brown)
         passwordField.setView(.left, space: 45)
         
-        createAccountButton.setCorner(radius: 29)
+        createAccountButton.setCorner(radius: createAccountButton.frame.height/2)
         
         googleButton.setBorder(width: 2, color: UIColor.black)
         googleButton.setCorner(radius:  30)
+        
+        appleButton.setBorder(width: 2, color: UIColor.black)
+        appleButton.setCorner(radius: 30)
     }
     
     

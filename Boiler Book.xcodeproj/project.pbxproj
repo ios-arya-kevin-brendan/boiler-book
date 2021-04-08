@@ -11,6 +11,7 @@
 		40DE50EE746921931AB30EB4 /* Pods_Boiler_Book_Boiler_BookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A85EFF0877B4F06B0D54A4 /* Pods_Boiler_Book_Boiler_BookUITests.framework */; };
 		D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604C324260BF60D00606B3A /* CreateAccountViewController.swift */; };
 		D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604C32C260BF77400606B3A /* ProfileViewController.swift */; };
+		D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6402B8D26128ED300CF9434 /* SettingsViewController.swift */; };
 		D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8A6260BEDE5007F2329 /* AppDelegate.swift */; };
 		D6CBC8A9260BEDE5007F2329 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8A8260BEDE5007F2329 /* SceneDelegate.swift */; };
 		D6CBC8AB260BEDE5007F2329 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8AA260BEDE5007F2329 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		A4682B365CA590E292A8A108 /* Pods-Boiler Book-Boiler BookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boiler Book-Boiler BookUITests.release.xcconfig"; path = "Target Support Files/Pods-Boiler Book-Boiler BookUITests/Pods-Boiler Book-Boiler BookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D604C324260BF60D00606B3A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		D604C32C260BF77400606B3A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D6402B8D26128ED300CF9434 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D6CBC8A3260BEDE5007F2329 /* Boiler Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boiler Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CBC8A6260BEDE5007F2329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6CBC8A8260BEDE5007F2329 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				D604C324260BF60D00606B3A /* CreateAccountViewController.swift */,
 				D604C32C260BF77400606B3A /* ProfileViewController.swift */,
 				D6D0942D260C5B7900A37C4C /* LoginViewController.swift */,
+				D6402B8D26128ED300CF9434 /* SettingsViewController.swift */,
 			);
 			path = "Boiler Book";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			files = (
 				D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */,
 				D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */,
+				D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */,
 				D6CBC8AB260BEDE5007F2329 /* ViewController.swift in Sources */,
 				D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */,
 				D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */,

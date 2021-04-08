@@ -1,25 +1,23 @@
 //
-//  ProfileViewController.swift
+//  SettingsViewController.swift
 //  Boiler Book
 //
-//  Created by Kevin Bates on 3/24/21.
+//  Created by Kevin Bates on 3/29/21.
 //
 
 import UIKit
-import Parse
 
-class ProfileViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var goBackButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onSettingsClick(_ sender: Any) {
-        performSegue(withIdentifier: "toSettings", sender: nil)
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

@@ -18,15 +18,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailField.setCorner(radius: 29)
+        emailField.setCorner(radius: emailField.frame.height/2)
         emailField.setBorder(width: 3, color: UIColor.brown)
         emailField.setView(.left, space: 45)
         
-        passwordField.setCorner(radius: 29)
+        passwordField.setCorner(radius: passwordField.frame.height/2)
         passwordField.setBorder(width: 3, color: UIColor.brown)
         passwordField.setView(.left, space: 45)
         
-        loginButton.setCorner(radius: 29)
+        loginButton.setCorner(radius: loginButton.frame.height/2)
 
         // Do any additional setup after loading the view.
     }
