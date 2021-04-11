@@ -8,14 +8,20 @@
 import UIKit
 
 class PostViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!  //Posted Image
+    @IBOutlet weak var bookTitle: UITextView!
+    @IBOutlet weak var descriptionTitle: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func messageButton(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
