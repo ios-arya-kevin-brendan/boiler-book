@@ -28,11 +28,11 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     @IBAction func onPost(_ sender: Any) {
-        print("hello")
+        print("Post Button")
     }
     
     @IBAction func onTap(_ sender: Any) {
-        print("Tapp")
+        print("Picture Tap")
         
         let picker = UIImagePickerController()
         picker.delegate = self
