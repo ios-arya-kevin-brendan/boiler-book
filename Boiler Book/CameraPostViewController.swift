@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+import Parse
 
 class CameraPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
@@ -29,6 +32,27 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
 
     @IBAction func onPost(_ sender: Any) {
         print("Post Button")
+        let post = PFObject(className: "userPost")
+        
+        post["poster"] = PFUser.current()!
+        post["bookName"] = bookTitleTextField.text!
+        post["author"] = authorTextField.text!
+        post["desription"] = descriptionTextField.text!
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(name: "postImage.png", data: imageData!)
+        post["image"] = file
+        post["subject"] = "CS180"
+        post["price"] = "100.00"
+        
+        post.saveInBackground { (success, error) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+                print("Saved!")
+            }
+            else {
+                print("Error")
+            }
+        }
     }
     
     @IBAction func onTap(_ sender: Any) {
@@ -47,6 +71,17 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
         }
         
         present(picker, animated: true, completion: nil)
+    }
+    
+    // Called when an image gets picked by user
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af.imageScaled(to:size)
+        
+        imageView.image = scaledImage
+        
+        dismiss(animated: true, completion: nil)
     }
     
 }
