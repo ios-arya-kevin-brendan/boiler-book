@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		14E1FE7C22224356AA8E4808 /* Pods_Boiler_BookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76AE7F6695D7227A61D5C8A9 /* Pods_Boiler_BookTests.framework */; };
+		1A96D5622623945400C58046 /* CameraPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D5612623945400C58046 /* CameraPostViewController.swift */; };
+		1A96D56A2623A44D00C58046 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D5692623A44D00C58046 /* PostViewController.swift */; };
 		40DE50EE746921931AB30EB4 /* Pods_Boiler_Book_Boiler_BookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A85EFF0877B4F06B0D54A4 /* Pods_Boiler_Book_Boiler_BookUITests.framework */; };
 		D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604C324260BF60D00606B3A /* CreateAccountViewController.swift */; };
 		D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604C32C260BF77400606B3A /* ProfileViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A96D5612623945400C58046 /* CameraPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPostViewController.swift; sourceTree = "<group>"; };
+		1A96D5692623A44D00C58046 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		1C0C1CF0D66FAA971ABE4D7C /* Pods_Boiler_Book.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boiler_Book.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F528E6138C7570352A0BC4B /* Pods-Boiler BookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boiler BookTests.debug.xcconfig"; path = "Target Support Files/Pods-Boiler BookTests/Pods-Boiler BookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F05E208893B802366F2E6EE /* Pods-Boiler BookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boiler BookTests.release.xcconfig"; path = "Target Support Files/Pods-Boiler BookTests/Pods-Boiler BookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				D6CBC8AF260BEDE8007F2329 /* Assets.xcassets */,
 				D6CBC8B1260BEDE8007F2329 /* LaunchScreen.storyboard */,
 				D6CBC8B4260BEDE8007F2329 /* Info.plist */,
+				1A96D5612623945400C58046 /* CameraPostViewController.swift */,
+				1A96D5692623A44D00C58046 /* PostViewController.swift */,
 				D604C324260BF60D00606B3A /* CreateAccountViewController.swift */,
 				D604C32C260BF77400606B3A /* ProfileViewController.swift */,
 				D6D0942D260C5B7900A37C4C /* LoginViewController.swift */,
@@ -418,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A96D56A2623A44D00C58046 /* PostViewController.swift in Sources */,
 				D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */,
 				D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */,
 				D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */,
@@ -425,6 +432,7 @@
 				D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */,
 				D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */,
 				D6CBC8A9260BEDE5007F2329 /* SceneDelegate.swift in Sources */,
+				1A96D5622623945400C58046 /* CameraPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC6V234L6Y;
 				INFOPLIST_FILE = "Boiler Book/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,6 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC6V234L6Y;
 				INFOPLIST_FILE = "Boiler Book/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
