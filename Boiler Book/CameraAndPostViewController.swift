@@ -1,8 +1,8 @@
 //
-//  CameraPostViewController.swift
+//  CameraAndPostViewController.swift
 //  Boiler Book
 //
-//  Created by Brendan Lee on 4/11/21.
+//  Created by Brendan Lee on 4/19/21.
 //
 
 import UIKit
@@ -10,17 +10,23 @@ import Alamofire
 import AlamofireImage
 import Parse
 
-class CameraPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+/*
+ @IBOutlet weak var imageView: UIImageView!
+ @IBOutlet weak var bookTitleTextField: UITextField!
+ @IBOutlet weak var authorTextField: UITextField!
+ @IBOutlet weak var descriptionTextField: UITextField!
+ @IBOutlet weak var priceTextField: UITextField!
+ */
+
+class CameraAndPostViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bookTitleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Change look of Textfields
         bookTitleTextField.setCorner(radius: bookTitleTextField.frame.height/2)
         bookTitleTextField.setBorder(width: 3, color: UIColor.brown)
         
@@ -33,7 +39,7 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
         descriptionTextField.setCorner(radius: descriptionTextField.frame.height/8)
         descriptionTextField.setBorder(width: 3, color: UIColor.brown)
     }
-
+    
     @IBAction func onPost(_ sender: Any) {
         print("Post Button")
         let post = PFObject(className: "userPost")
@@ -57,6 +63,7 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
             }
         }
     }
+    
     
     @IBAction func onTap(_ sender: Any) {
         print("Picture Tap")
