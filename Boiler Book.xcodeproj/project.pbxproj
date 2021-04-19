@@ -24,6 +24,12 @@
 		D6CBC8C9260BEDE9007F2329 /* Boiler_BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8C8260BEDE9007F2329 /* Boiler_BookUITests.swift */; };
 		D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0942D260C5B7900A37C4C /* LoginViewController.swift */; };
 		DE37E60002CF091FECE44E5D /* Pods_Boiler_Book.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0C1CF0D66FAA971ABE4D7C /* Pods_Boiler_Book.framework */; };
+		E9CA75632628FF4300736861 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA75622628FF4300736861 /* ClassTableViewCell.swift */; };
+		E9CA75682628FF9E00736861 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA75672628FF9E00736861 /* SearchViewController.swift */; };
+		E9CA756D2629004D00736861 /* Classes.json in Resources */ = {isa = PBXBuildFile; fileRef = E9CA756C2629004D00736861 /* Classes.json */; };
+		E9CA757226290D7500736861 /* DetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA757126290D7500736861 /* DetailSearchViewController.swift */; };
+		E9CA757F2629194300736861 /* DetailSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA757E2629194300736861 /* DetailSearchTableViewCell.swift */; };
+		E9CA758726291C6000736861 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA758626291C6000736861 /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,12 @@
 		D6CBC8C8260BEDE9007F2329 /* Boiler_BookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boiler_BookUITests.swift; sourceTree = "<group>"; };
 		D6CBC8CA260BEDE9007F2329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D0942D260C5B7900A37C4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E9CA75622628FF4300736861 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassTableViewCell.swift; path = "Boiler Book/ClassTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		E9CA75672628FF9E00736861 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "Boiler Book/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
+		E9CA756C2629004D00736861 /* Classes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Classes.json; path = "Boiler Book/Classes.json"; sourceTree = SOURCE_ROOT; };
+		E9CA757126290D7500736861 /* DetailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailSearchViewController.swift; path = "Boiler Book/DetailSearchViewController.swift"; sourceTree = SOURCE_ROOT; };
+		E9CA757E2629194300736861 /* DetailSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchTableViewCell.swift; sourceTree = "<group>"; };
+		E9CA758626291C6000736861 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +176,12 @@
 				D604C32C260BF77400606B3A /* ProfileViewController.swift */,
 				D6D0942D260C5B7900A37C4C /* LoginViewController.swift */,
 				D6402B8D26128ED300CF9434 /* SettingsViewController.swift */,
+				E9CA75622628FF4300736861 /* ClassTableViewCell.swift */,
+				E9CA75672628FF9E00736861 /* SearchViewController.swift */,
+				E9CA756C2629004D00736861 /* Classes.json */,
+				E9CA757126290D7500736861 /* DetailSearchViewController.swift */,
+				E9CA757E2629194300736861 /* DetailSearchTableViewCell.swift */,
+				E9CA758626291C6000736861 /* Class.swift */,
 			);
 			path = "Boiler Book";
 			sourceTree = "<group>";
@@ -296,6 +314,7 @@
 			files = (
 				D6CBC8B3260BEDE8007F2329 /* LaunchScreen.storyboard in Resources */,
 				D6CBC8B0260BEDE8007F2329 /* Assets.xcassets in Resources */,
+				E9CA756D2629004D00736861 /* Classes.json in Resources */,
 				D6CBC8AE260BEDE5007F2329 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,12 +445,17 @@
 			files = (
 				1A96D56A2623A44D00C58046 /* PostViewController.swift in Sources */,
 				D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */,
+				E9CA758726291C6000736861 /* Class.swift in Sources */,
 				D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */,
 				D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */,
 				D6CBC8AB260BEDE5007F2329 /* ViewController.swift in Sources */,
+				E9CA757226290D7500736861 /* DetailSearchViewController.swift in Sources */,
 				D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */,
+				E9CA75682628FF9E00736861 /* SearchViewController.swift in Sources */,
+				E9CA757F2629194300736861 /* DetailSearchTableViewCell.swift in Sources */,
 				D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */,
 				D6CBC8A9260BEDE5007F2329 /* SceneDelegate.swift in Sources */,
+				E9CA75632628FF4300736861 /* ClassTableViewCell.swift in Sources */,
 				1A96D5622623945400C58046 /* CameraPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

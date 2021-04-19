@@ -1,0 +1,15 @@
+[
+    { "name": "CS 490", "category": "CS" },
+    { "name": "CS 252", "category": "CS" },
+    { "name": "CS 180", "category": "CS" },
+    { "name": "CS 251", "category": "CS" },
+  { "name": "MA 265", "category": "Math" },
+  { "name": "STAT 350", "category": "Math" },
+  { "name": "MA 262", "category": "Math" },
+  { "name": "MA 261", "category": "Math" },
+  { "name": "SCLA 101", "category": "English" },
+  { "name": "SCLA 102", "category": "English" },
+  { "name": "ENGL 301", "category": "English" },
+  { "name": "ENGL 302", "category": "English" },
+]
+
