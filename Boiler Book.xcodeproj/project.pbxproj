@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		14E1FE7C22224356AA8E4808 /* Pods_Boiler_BookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76AE7F6695D7227A61D5C8A9 /* Pods_Boiler_BookTests.framework */; };
 		1A96D5622623945400C58046 /* CameraPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D5612623945400C58046 /* CameraPostViewController.swift */; };
-		1A96D56A2623A44D00C58046 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A96D5692623A44D00C58046 /* PostViewController.swift */; };
+		1AD883C4262E1F5E0002D402 /* CameraAndPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD883C3262E1F5E0002D402 /* CameraAndPostViewController.swift */; };
+		1AD883CC262E247A0002D402 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD883CB262E247A0002D402 /* FeedViewController.swift */; };
+		1AD883D1262E25410002D402 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD883D0262E25410002D402 /* PostCell.swift */; };
+		1AD883D9262E38050002D402 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD883D8262E38050002D402 /* DetailsViewController.swift */; };
 		40DE50EE746921931AB30EB4 /* Pods_Boiler_Book_Boiler_BookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A85EFF0877B4F06B0D54A4 /* Pods_Boiler_Book_Boiler_BookUITests.framework */; };
 		D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604C324260BF60D00606B3A /* CreateAccountViewController.swift */; };
 		D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604C32C260BF77400606B3A /* ProfileViewController.swift */; };
@@ -51,7 +54,10 @@
 
 /* Begin PBXFileReference section */
 		1A96D5612623945400C58046 /* CameraPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPostViewController.swift; sourceTree = "<group>"; };
-		1A96D5692623A44D00C58046 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		1AD883C3262E1F5E0002D402 /* CameraAndPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAndPostViewController.swift; sourceTree = "<group>"; };
+		1AD883CB262E247A0002D402 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1AD883D0262E25410002D402 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		1AD883D8262E38050002D402 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		1C0C1CF0D66FAA971ABE4D7C /* Pods_Boiler_Book.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boiler_Book.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F528E6138C7570352A0BC4B /* Pods-Boiler BookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boiler BookTests.debug.xcconfig"; path = "Target Support Files/Pods-Boiler BookTests/Pods-Boiler BookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F05E208893B802366F2E6EE /* Pods-Boiler BookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boiler BookTests.release.xcconfig"; path = "Target Support Files/Pods-Boiler BookTests/Pods-Boiler BookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,8 +176,11 @@
 				D6CBC8AF260BEDE8007F2329 /* Assets.xcassets */,
 				D6CBC8B1260BEDE8007F2329 /* LaunchScreen.storyboard */,
 				D6CBC8B4260BEDE8007F2329 /* Info.plist */,
+				1AD883D8262E38050002D402 /* DetailsViewController.swift */,
+				1AD883D0262E25410002D402 /* PostCell.swift */,
+				1AD883CB262E247A0002D402 /* FeedViewController.swift */,
+				1AD883C3262E1F5E0002D402 /* CameraAndPostViewController.swift */,
 				1A96D5612623945400C58046 /* CameraPostViewController.swift */,
-				1A96D5692623A44D00C58046 /* PostViewController.swift */,
 				D604C324260BF60D00606B3A /* CreateAccountViewController.swift */,
 				D604C32C260BF77400606B3A /* ProfileViewController.swift */,
 				D6D0942D260C5B7900A37C4C /* LoginViewController.swift */,
@@ -443,10 +452,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A96D56A2623A44D00C58046 /* PostViewController.swift in Sources */,
 				D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */,
 				E9CA758726291C6000736861 /* Class.swift in Sources */,
 				D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */,
+				1AD883CC262E247A0002D402 /* FeedViewController.swift in Sources */,
 				D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */,
 				D6CBC8AB260BEDE5007F2329 /* ViewController.swift in Sources */,
 				E9CA757226290D7500736861 /* DetailSearchViewController.swift in Sources */,
@@ -456,7 +465,10 @@
 				D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */,
 				D6CBC8A9260BEDE5007F2329 /* SceneDelegate.swift in Sources */,
 				E9CA75632628FF4300736861 /* ClassTableViewCell.swift in Sources */,
+				1AD883D1262E25410002D402 /* PostCell.swift in Sources */,
+				1AD883C4262E1F5E0002D402 /* CameraAndPostViewController.swift in Sources */,
 				1A96D5622623945400C58046 /* CameraPostViewController.swift in Sources */,
+				1AD883D9262E38050002D402 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

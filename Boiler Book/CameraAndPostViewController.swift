@@ -1,8 +1,8 @@
 //
-//  CameraPostViewController.swift
+//  CameraAndPostViewController.swift
 //  Boiler Book
 //
-//  Created by Brendan Lee on 4/11/21.
+//  Created by Brendan Lee on 4/19/21.
 //
 
 import UIKit
@@ -11,56 +11,26 @@ import AlamofireImage
 import Parse
 
 /*
- 
- 
- 
- 
- Do not use anymore.
- 
- 
- 
- 
- 
+ @IBOutlet weak var imageView: UIImageView!
+ @IBOutlet weak var bookTitleTextField: UITextField!
+ @IBOutlet weak var authorTextField: UITextField!
+ @IBOutlet weak var descriptionTextField: UITextField!
+ @IBOutlet weak var priceTextField: UITextField!
  */
-class CameraPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class CameraAndPostViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bookTitleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
-    /*
-     
-     
-     
-     
-     Do not use anymore.
-     
-     
-     
-     
-     
-     */
+    @IBOutlet weak var descriptionTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Change look of Textfields
         bookTitleTextField.setCorner(radius: bookTitleTextField.frame.height/2)
         bookTitleTextField.setBorder(width: 3, color: UIColor.brown)
         
         authorTextField.setCorner(radius: authorTextField.frame.height/2)
-        /*
-         
-         
-         
-         
-         Do not use anymore.
-         
-         
-         
-         
-         
-         */
         authorTextField.setBorder(width: 3, color: UIColor.brown)
         
         priceTextField.setCorner(radius: priceTextField.frame.height/2)
@@ -69,23 +39,11 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
         descriptionTextField.setCorner(radius: descriptionTextField.frame.height/8)
         descriptionTextField.setBorder(width: 3, color: UIColor.brown)
     }
-
+    
     @IBAction func onPost(_ sender: Any) {
         print("Post Button")
         let post = PFObject(className: "userPost")
         post["poster"] = PFUser.current()!
-        /*
-         
-         
-         
-         
-         Do not use anymore.
-         
-         
-         
-         
-         
-         */
         post["bookName"] = bookTitleTextField.text!
         post["author"] = authorTextField.text!
         post["desription"] = descriptionTextField.text!
@@ -105,6 +63,7 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
             }
         }
     }
+    
     
     @IBAction func onTap(_ sender: Any) {
         print("Picture Tap")
@@ -134,5 +93,6 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
         
         dismiss(animated: true, completion: nil)
     }
+    
     
 }
