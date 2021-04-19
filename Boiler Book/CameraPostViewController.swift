@@ -10,12 +10,36 @@ import Alamofire
 import AlamofireImage
 import Parse
 
+/*
+ 
+ 
+ 
+ 
+ Do not use anymore.
+ 
+ 
+ 
+ 
+ 
+ */
 class CameraPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bookTitleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
+    /*
+     
+     
+     
+     
+     Do not use anymore.
+     
+     
+     
+     
+     
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +49,18 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
         bookTitleTextField.setBorder(width: 3, color: UIColor.brown)
         
         authorTextField.setCorner(radius: authorTextField.frame.height/2)
+        /*
+         
+         
+         
+         
+         Do not use anymore.
+         
+         
+         
+         
+         
+         */
         authorTextField.setBorder(width: 3, color: UIColor.brown)
         
         priceTextField.setCorner(radius: priceTextField.frame.height/2)
@@ -38,6 +74,18 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
         print("Post Button")
         let post = PFObject(className: "userPost")
         post["poster"] = PFUser.current()!
+        /*
+         
+         
+         
+         
+         Do not use anymore.
+         
+         
+         
+         
+         
+         */
         post["bookName"] = bookTitleTextField.text!
         post["author"] = authorTextField.text!
         post["desription"] = descriptionTextField.text!

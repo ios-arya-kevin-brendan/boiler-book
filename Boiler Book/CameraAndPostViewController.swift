@@ -94,4 +94,5 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
         dismiss(animated: true, completion: nil)
     }
     
+    
 }

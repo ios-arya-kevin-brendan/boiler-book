@@ -43,6 +43,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return posts.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         let post = posts[indexPath.row]
@@ -61,6 +62,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
  
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailBook" {
+            guard let detailVC = segue.destination as? DetailsViewController else { return }
+            detailVC.bookTitleLabel.text = "Some Title"
+            
+        }
     }
 }
 //priceTextField.setCorner(radius: priceTextField.frame.height/2)
