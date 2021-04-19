@@ -9,20 +9,26 @@ import UIKit
 
 class DetailSearchViewController: UIViewController {
 
+    
         
     @IBOutlet var tableView: UITableView!
+    var classes = [[String:Any]]()
     
     var class_: Class? {
         didSet {
-            configureView()
+            //configureView()
         }
     }
     override func viewDidLoad() {
       super.viewDidLoad()
-      
-      configureView()
+        
+        //tableView.dataSource = self
+        //tableView.delegate = self
+        
+        
+      //configureView()
     }
-    
+    /*
     func configureView() {
       //if let classes = class_,
         //let detailDescriptionLabel = detailDescriptionLabel,
@@ -33,6 +39,7 @@ class DetailSearchViewController: UIViewController {
         //ADD SHIT IN
         
     }
+ */
 
 
 }
