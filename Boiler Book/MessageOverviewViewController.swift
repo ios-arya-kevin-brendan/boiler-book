@@ -1,32 +1,21 @@
 //
-//  ProfileViewController.swift
+//  MessageOverviewViewController.swift
 //  Boiler Book
 //
-//  Created by Kevin Bates on 3/24/21.
+//  Created by Kevin Bates on 4/21/21.
 //
 
 import UIKit
-import Parse
 
-class ProfileViewController: UIViewController {
+class MessageOverviewViewController: UIViewController {
 
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var settingsButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let user = PFUser.current()
-        
-        profileImage.image = user?["profileImage"] as? UIImage
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onSettingsClick(_ sender: Any) {
-        performSegue(withIdentifier: "toSettings", sender: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 
