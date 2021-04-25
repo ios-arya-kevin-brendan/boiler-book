@@ -6,13 +6,35 @@
 //
 
 import UIKit
+import Parse
 
-class MessageOverviewViewController: UIViewController {
-
+class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var user = PFUser.current()
+    
+    @IBOutlet weak var messageOverView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.messageOverView.delegate = self
+        self.messageOverView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (user?["peopleMessaged"] == nil) {
+            return 0
+        }
+        return ((user?["peopleMessaged"])! as! [PFUser]).count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.messageOverView.dequeueReusableCell(withIdentifier: "MessageCell")! as! PersonMessagedCell
+        
+        let peopleMessaged: [PFUser] = user!["peopleMessaged"] as! [PFUser]
+        cell.nameField.text = peopleMessaged[indexPath.row].username
+        
+        return cell
     }
     
 
