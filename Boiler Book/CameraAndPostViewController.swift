@@ -10,14 +10,6 @@ import Alamofire
 import AlamofireImage
 import Parse
 
-/*
- @IBOutlet weak var imageView: UIImageView!
- @IBOutlet weak var bookTitleTextField: UITextField!
- @IBOutlet weak var authorTextField: UITextField!
- @IBOutlet weak var descriptionTextField: UITextField!
- @IBOutlet weak var priceTextField: UITextField!
- */
-
 class CameraAndPostViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bookTitleTextField: UITextField!
@@ -52,6 +44,10 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
         post["image"] = file
         post["subject"] = "CS180"
         post["price"] = priceTextField.text!
+        
+        // Generate unique id
+        let randint = (Int.random(in: 9..<12))
+        post["uniqueID"] = randomString(length: randint)
         
         post.saveInBackground { (success, error) in
             if success {
@@ -92,6 +88,11 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
         imageView.image = scaledImage
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
     }
     
     
