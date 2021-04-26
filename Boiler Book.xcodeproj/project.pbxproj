@@ -26,6 +26,10 @@
 		D6CBC8BE260BEDE9007F2329 /* Boiler_BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8BD260BEDE9007F2329 /* Boiler_BookTests.swift */; };
 		D6CBC8C9260BEDE9007F2329 /* Boiler_BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8C8260BEDE9007F2329 /* Boiler_BookUITests.swift */; };
 		D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0942D260C5B7900A37C4C /* LoginViewController.swift */; };
+		D6FE58E02637788A004EFFCF /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE58DF26377889004EFFCF /* ChatCell.swift */; };
+		D6FE58E5263778C2004EFFCF /* MessageOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE58E4263778C1004EFFCF /* MessageOverviewViewController.swift */; };
+		D6FE58EA263778CB004EFFCF /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE58E9263778CB004EFFCF /* MessageViewController.swift */; };
+		D6FE58EF263778D6004EFFCF /* PersonMessagedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE58EE263778D6004EFFCF /* PersonMessagedCell.swift */; };
 		DE37E60002CF091FECE44E5D /* Pods_Boiler_Book.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0C1CF0D66FAA971ABE4D7C /* Pods_Boiler_Book.framework */; };
 		E9CA75632628FF4300736861 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA75622628FF4300736861 /* ClassTableViewCell.swift */; };
 		E9CA75682628FF9E00736861 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA75672628FF9E00736861 /* SearchViewController.swift */; };
@@ -85,6 +89,10 @@
 		D6CBC8C8260BEDE9007F2329 /* Boiler_BookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boiler_BookUITests.swift; sourceTree = "<group>"; };
 		D6CBC8CA260BEDE9007F2329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D0942D260C5B7900A37C4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6FE58DF26377889004EFFCF /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		D6FE58E4263778C1004EFFCF /* MessageOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageOverviewViewController.swift; sourceTree = "<group>"; };
+		D6FE58E9263778CB004EFFCF /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		D6FE58EE263778D6004EFFCF /* PersonMessagedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonMessagedCell.swift; sourceTree = "<group>"; };
 		E9CA75622628FF4300736861 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassTableViewCell.swift; path = "Boiler Book/ClassTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		E9CA75672628FF9E00736861 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "Boiler Book/SearchViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E9CA756C2629004D00736861 /* Classes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Classes.json; path = "Boiler Book/Classes.json"; sourceTree = SOURCE_ROOT; };
@@ -170,27 +178,31 @@
 			isa = PBXGroup;
 			children = (
 				D6CBC8A6260BEDE5007F2329 /* AppDelegate.swift */,
-				D6CBC8A8260BEDE5007F2329 /* SceneDelegate.swift */,
-				D6CBC8AA260BEDE5007F2329 /* ViewController.swift */,
-				D6CBC8AC260BEDE5007F2329 /* Main.storyboard */,
 				D6CBC8AF260BEDE8007F2329 /* Assets.xcassets */,
-				D6CBC8B1260BEDE8007F2329 /* LaunchScreen.storyboard */,
-				D6CBC8B4260BEDE8007F2329 /* Info.plist */,
-				1AD883D0262E25410002D402 /* PostCell.swift */,
-				1AD883D8262E38050002D402 /* DetailsViewController.swift */,
-				1AD883CB262E247A0002D402 /* FeedViewController.swift */,
 				1AD883C3262E1F5E0002D402 /* CameraAndPostViewController.swift */,
 				1A96D5612623945400C58046 /* CameraPostViewController.swift */,
-				D604C324260BF60D00606B3A /* CreateAccountViewController.swift */,
-				D604C32C260BF77400606B3A /* ProfileViewController.swift */,
-				D6D0942D260C5B7900A37C4C /* LoginViewController.swift */,
-				D6402B8D26128ED300CF9434 /* SettingsViewController.swift */,
-				E9CA75622628FF4300736861 /* ClassTableViewCell.swift */,
-				E9CA75672628FF9E00736861 /* SearchViewController.swift */,
-				E9CA756C2629004D00736861 /* Classes.json */,
-				E9CA757126290D7500736861 /* DetailSearchViewController.swift */,
-				E9CA757E2629194300736861 /* DetailSearchTableViewCell.swift */,
+				D6FE58DF26377889004EFFCF /* ChatCell.swift */,
 				E9CA758626291C6000736861 /* Class.swift */,
+				E9CA756C2629004D00736861 /* Classes.json */,
+				E9CA75622628FF4300736861 /* ClassTableViewCell.swift */,
+				D604C324260BF60D00606B3A /* CreateAccountViewController.swift */,
+				E9CA757E2629194300736861 /* DetailSearchTableViewCell.swift */,
+				E9CA757126290D7500736861 /* DetailSearchViewController.swift */,
+				1AD883D8262E38050002D402 /* DetailsViewController.swift */,
+				1AD883CB262E247A0002D402 /* FeedViewController.swift */,
+				D6CBC8B4260BEDE8007F2329 /* Info.plist */,
+				D6CBC8B1260BEDE8007F2329 /* LaunchScreen.storyboard */,
+				D6D0942D260C5B7900A37C4C /* LoginViewController.swift */,
+				D6FE58E4263778C1004EFFCF /* MessageOverviewViewController.swift */,
+				D6FE58E9263778CB004EFFCF /* MessageViewController.swift */,
+				D6CBC8AC260BEDE5007F2329 /* Main.storyboard */,
+				D6FE58EE263778D6004EFFCF /* PersonMessagedCell.swift */,
+				1AD883D0262E25410002D402 /* PostCell.swift */,
+				D604C32C260BF77400606B3A /* ProfileViewController.swift */,
+				D6CBC8A8260BEDE5007F2329 /* SceneDelegate.swift */,
+				E9CA75672628FF9E00736861 /* SearchViewController.swift */,
+				D6402B8D26128ED300CF9434 /* SettingsViewController.swift */,
+				D6CBC8AA260BEDE5007F2329 /* ViewController.swift */,
 			);
 			path = "Boiler Book";
 			sourceTree = "<group>";
@@ -456,6 +468,7 @@
 				E9CA758726291C6000736861 /* Class.swift in Sources */,
 				D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */,
 				1AD883CC262E247A0002D402 /* FeedViewController.swift in Sources */,
+				D6FE58EF263778D6004EFFCF /* PersonMessagedCell.swift in Sources */,
 				D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */,
 				D6CBC8AB260BEDE5007F2329 /* ViewController.swift in Sources */,
 				E9CA757226290D7500736861 /* DetailSearchViewController.swift in Sources */,
@@ -463,10 +476,13 @@
 				E9CA75682628FF9E00736861 /* SearchViewController.swift in Sources */,
 				E9CA757F2629194300736861 /* DetailSearchTableViewCell.swift in Sources */,
 				D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */,
+				D6FE58E02637788A004EFFCF /* ChatCell.swift in Sources */,
 				D6CBC8A9260BEDE5007F2329 /* SceneDelegate.swift in Sources */,
 				E9CA75632628FF4300736861 /* ClassTableViewCell.swift in Sources */,
+				D6FE58EA263778CB004EFFCF /* MessageViewController.swift in Sources */,
 				1AD883D1262E25410002D402 /* PostCell.swift in Sources */,
 				1AD883C4262E1F5E0002D402 /* CameraAndPostViewController.swift in Sources */,
+				D6FE58E5263778C2004EFFCF /* MessageOverviewViewController.swift in Sources */,
 				1A96D5622623945400C58046 /* CameraPostViewController.swift in Sources */,
 				1AD883D9262E38050002D402 /* DetailsViewController.swift in Sources */,
 			);

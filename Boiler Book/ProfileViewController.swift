@@ -10,11 +10,22 @@ import Parse
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var settingsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        let user = PFUser.current()!
+        let rawImageFile = user["profilePicture"]
+        if rawImageFile != nil {
+            let imageFile = rawImageFile as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+        
+            profileImage.af.setImage(withURL: url)
+        }
+        profileImage.layer.cornerRadius = profileImage.bounds.width/2
         // Do any additional setup after loading the view.
     }
     
