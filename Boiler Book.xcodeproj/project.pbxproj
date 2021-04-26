@@ -24,6 +24,7 @@
 		D6CBC8BE260BEDE9007F2329 /* Boiler_BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8BD260BEDE9007F2329 /* Boiler_BookTests.swift */; };
 		D6CBC8C9260BEDE9007F2329 /* Boiler_BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8C8260BEDE9007F2329 /* Boiler_BookUITests.swift */; };
 		D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D0942D260C5B7900A37C4C /* LoginViewController.swift */; };
+		D6FE30BC263603E9009ABAFF /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE30BB263603E9009ABAFF /* ChatCell.swift */; };
 		DE37E60002CF091FECE44E5D /* Pods_Boiler_Book.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0C1CF0D66FAA971ABE4D7C /* Pods_Boiler_Book.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		D6CBC8C8260BEDE9007F2329 /* Boiler_BookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boiler_BookUITests.swift; sourceTree = "<group>"; };
 		D6CBC8CA260BEDE9007F2329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D0942D260C5B7900A37C4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D6FE30BB263603E9009ABAFF /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				D6402B8D26128ED300CF9434 /* SettingsViewController.swift */,
 				D62E7C9F2630DD6F0097ACE4 /* MessageViewController.swift */,
 				D62FC2512635E89A003F784F /* PersonMessagedCell.swift */,
+				D6FE30BB263603E9009ABAFF /* ChatCell.swift */,
 			);
 			path = "Boiler Book";
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				D6D0942E260C5B7900A37C4C /* LoginViewController.swift in Sources */,
 				D62E7CA02630DD6F0097ACE4 /* MessageViewController.swift in Sources */,
+				D6FE30BC263603E9009ABAFF /* ChatCell.swift in Sources */,
 				D62E7C9B2630D1010097ACE4 /* MessageOverviewViewController.swift in Sources */,
 				D604C325260BF60D00606B3A /* CreateAccountViewController.swift in Sources */,
 				D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */,

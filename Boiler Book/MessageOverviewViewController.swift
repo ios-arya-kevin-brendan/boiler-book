@@ -19,6 +19,7 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
         self.messageOverView.delegate = self
         self.messageOverView.dataSource = self
         // Do any additional setup after loading the view.
+        performSegue(withIdentifier: "toChat", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

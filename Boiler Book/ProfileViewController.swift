@@ -16,10 +16,16 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let user = PFUser.current()
+        let user = PFUser.current()!
+        let rawImageFile = user["profilePicture"]
+        if rawImageFile != nil {
+            let imageFile = rawImageFile as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
         
-        profileImage.image = user?["profileImage"] as? UIImage
-
+            profileImage.af.setImage(withURL: url)
+        }
+        profileImage.layer.cornerRadius = profileImage.bounds.width/2
         // Do any additional setup after loading the view.
     }
     
