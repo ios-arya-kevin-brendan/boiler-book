@@ -39,13 +39,13 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 
 **Required Must-have Stories**
 
-[x] User can login
-[x] User can create a new account
-[x] * User can see the main feed with all listings
-[x] * User can post their book to the feed (picture and comment)
-[x] * User can search for a book
-* User can see rough location of seller/book
-[x] * Sold books marked as sold
+- [X] User can login
+- [X] User can create a new account
+- [X] User can see the main feed with all listings
+- [X] User can post their book to the feed (picture and comment)
+- [X] User can search for a book
+- [ ] User can see rough location of seller/book
+- [X] Sold books marked as sold
 
 **Optional Nice-to-have Stories**
 
