@@ -61,7 +61,7 @@ class SearchViewController: UIViewController {
         } else {
             class_ = classes[indexPath.row]
         }
-      detailViewController.class_ = class_
+      //detailViewController.class_ = class_
     }
     
     var isSearchBarEmpty: Bool {
