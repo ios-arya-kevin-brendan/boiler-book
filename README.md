@@ -18,7 +18,7 @@ Arya
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
 
-<img src="http://g.recordit.co/XtJx1UGO3O.gif" width=250><br>
+<img src="http://g.recordit.co/0n12Fhwq44.gif" width=250><br>
 
 ## Overview
 ### Description
