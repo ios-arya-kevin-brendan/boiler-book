@@ -39,13 +39,13 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 
 **Required Must-have Stories**
 
-* User can login
-* User can create a new account
-* User can see the main feed with all listings
-* User can post their book to the feed (picture and comment)
-* User can search for a book
+[x] * User can login
+[x] * User can create a new account
+[x] * User can see the main feed with all listings
+[x] * User can post their book to the feed (picture and comment)
+[x] * User can search for a book
 * User can see rough location of seller/book
-* Sold books marked as sold
+[x] * Sold books marked as sold
 
 **Optional Nice-to-have Stories**
 
@@ -139,3 +139,14 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+
+##FINAL SPRINT
+Project Board Issues
+ - Merging branch from Kevin to main not working, therefore missing the finished profile and messages
+
+Sprint planned for next week
+ - fix merging by presentation
+ - add map function by presentation
+
