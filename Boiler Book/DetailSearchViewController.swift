@@ -86,19 +86,6 @@ class DetailSearchViewController: UIViewController, UITableViewDelegate, UITable
             print("HI BITCH")
             guard let detailVC = segue.destination as? DetailsViewController else {return }
             
-            if let indexpath = tableView.indexPathForSelectedRow {
-                /*
-                let selectedRow = indexpath.row // Set to the current row element
-                let currpost = classes[selectedRow]
-                detailVC.title_text = currpost["bookName"] as! String
-                detailVC.author_text = currpost["author"] as! String
-                detailVC.price_text = currpost["price"] as! String
-                detailVC.description_text = currpost["desription"] as! String
-                detailVC.imageFile = currpost["image"] as? PFFileObject
-                */
-                detailVC.title_text = "something"
-                                
-            }
             
             print("completed segue")
         }

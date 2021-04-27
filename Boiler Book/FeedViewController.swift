@@ -67,7 +67,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailBook" {
             guard let detailVC = segue.destination as? DetailsViewController else { return }
-            detailVC.bookTitleLabel.text = "Some Title"
+            
+            if let indexpath = tableView.indexPathForSelectedRow {
+                
+                let selectedRow = indexpath.row // Set to the current row element
+                let currpost = posts[selectedRow]
+                detailVC.title_text = currpost["bookName"] as! String
+                detailVC.author_text = currpost["author"] as! String
+                detailVC.price_text = currpost["price"] as! String
+                detailVC.description_text = currpost["desription"] as! String
+                detailVC.imageFile = currpost["image"] as? PFFileObject
+                
+
+                                
+            }
+
             
         }
     }
