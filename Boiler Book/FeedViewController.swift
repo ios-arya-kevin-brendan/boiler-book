@@ -102,6 +102,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 detailVC.price_text = currpost["price"] as! String
                 detailVC.description_text = currpost["desription"] as! String
                 detailVC.imageFile = currpost["image"] as? PFFileObject
+                detailVC.posterUsername = currpost["posterUsername"] as! String
             }
             print("completed segue")
         }

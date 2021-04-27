@@ -44,6 +44,7 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
         post["image"] = file
         post["subject"] = "CS180"
         post["price"] = priceTextField.text!
+        post["posterUsername"] = PFUser.current()?.username
         
         // Generate unique id
         let randint = (Int.random(in: 9..<12))

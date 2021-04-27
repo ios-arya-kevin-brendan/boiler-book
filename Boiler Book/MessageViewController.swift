@@ -10,10 +10,13 @@ import Parse
 
 class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messages: UITableView!
     var messagesArray: [String] = [String]()
     @IBOutlet weak var messageInput: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    var receiver: String = "error"
+    let user = PFUser.current()
     
     var parseMessages: [PFObject] = []
     
@@ -23,9 +26,10 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.messages.delegate = self
         self.messages.dataSource = self
         messages.separatorStyle = .none
+        usernameLabel.text = receiver
         
         loadMessages()
-        Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.loadMessages), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.loadMessages), userInfo: nil, repeats: true)
 
         // Do any additional setup after loading the view.
     }
@@ -41,6 +45,8 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         chatMessage["text"] = messageInput.text ?? ""
         chatMessage["senderUsername"] = PFUser.current()?.username
         chatMessage["user"] = PFUser.current()!["name"]
+        chatMessage["receiver"] = receiver
+        
         chatMessage.saveInBackground { (success, error) in
             self.loadMessages()
             self.messageInput.text = ""
@@ -57,7 +63,16 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         let query = PFQuery(className: "Message")
         
         query.findObjectsInBackground { (messages: [PFObject]!, error: Error?) in
-            self.parseMessages = messages
+            var newMessages: [PFObject] = [PFObject]()
+            for message in messages {
+                if (message["receiver"] as? String == self.user?.username
+                    && message["senderUsername"] as? String == self.receiver)
+                    || (message["receiver"] as? String == self.receiver
+                    && message["senderUsername"] as? String == self.user?.username) {
+                newMessages.append(message)
+                }
+            }
+            self.parseMessages = newMessages
             self.messages.reloadData()
             //print(messages[1]["text"] as! String)
         }
@@ -90,8 +105,11 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+ */
+    
 }

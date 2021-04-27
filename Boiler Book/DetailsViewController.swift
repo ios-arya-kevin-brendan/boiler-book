@@ -22,6 +22,8 @@ class DetailsViewController: UIViewController {
     var price_text = ""
     var description_text = ""
     var imageFile: PFFileObject?
+    
+    var posterUsername: String = "error"
 
     var posts = [PFObject]()
 
@@ -35,5 +37,16 @@ class DetailsViewController: UIViewController {
         let urlString = imageFile?.url ?? "https://i.imgur.com/mCHMpLT.png"
         let url = URL(string: urlString)!
         bookImageView.af.setImage(withURL: url)
+        
+        print(posterUsername)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toChat") {
+            let chatPage = segue.destination as! MessageViewController
+            chatPage.receiver = posterUsername
+        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
 }
