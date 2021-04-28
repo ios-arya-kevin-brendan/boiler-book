@@ -56,7 +56,7 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("clicked thing")
-        performSegue(withIdentifier: "toChat", sender: indexPath.row)
+        performSegue(withIdentifier: "toKitChat", sender: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,6 +84,16 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
         print("prepping screen")
         if (segue.identifier == "toChat") {
             let chatPage = segue.destination as! MessageViewController
+            chatPage.receiver = senders[sender as! Int]["senderUsername"] as! String
+            if (senders[sender as! Int]["senderUsername"] as! String) == user?.username {
+                chatPage.receiver = senders[sender as! Int]["receiver"] as! String
+                chatPage.receiverUsername = senders[sender as! Int]["receiverUsername"] as! String
+            } else {
+                chatPage.receiver = senders[sender as! Int]["sender"] as! String
+                chatPage.receiverUsername = senders[sender as! Int]["senderUsername"] as! String
+            }
+        } else if segue.identifier == "toKitChat" {
+            let chatPage = segue.destination as! MessageKitViewController
             chatPage.receiver = senders[sender as! Int]["senderUsername"] as! String
             if (senders[sender as! Int]["senderUsername"] as! String) == user?.username {
                 chatPage.receiver = senders[sender as! Int]["receiver"] as! String

@@ -9,7 +9,7 @@ target 'Boiler Book' do
 	
   pod 'AlamofireImage'
   pod 'Parse'
-
+  pod 'MessageKit'
   target 'Boiler BookTests' do
     inherit! :search_paths
     # Pods for testing
