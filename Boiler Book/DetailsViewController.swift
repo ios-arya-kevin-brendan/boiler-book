@@ -41,11 +41,19 @@ class DetailsViewController: UIViewController {
         print(posterUsername)
     }
     
+
+    @IBAction func messageButtonPress(_ sender: Any) {
+        performSegue(withIdentifier: "toChat", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            print("prepping segue")
         if (segue.identifier == "toChat") {
-            let chatPage = segue.destination as! MessageViewController
-            chatPage.receiver = posterUsername
+            if let chatPage = segue.destination as? MessageViewController {
+                chatPage.receiver = posterUsername
+            }
         }
+        print("finished prepping")
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }

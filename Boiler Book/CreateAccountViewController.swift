@@ -23,7 +23,7 @@ class CreateAccountController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         
         //setting up textbox/buttons
         emailField.setCorner(radius: emailField.frame.height/2)
@@ -93,6 +93,18 @@ class CreateAccountController: UIViewController {
         performSegue(withIdentifier: "loggingIn", sender: nil)
     }
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 extension UIView {

@@ -22,6 +22,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         self.messages.delegate = self
         self.messages.dataSource = self

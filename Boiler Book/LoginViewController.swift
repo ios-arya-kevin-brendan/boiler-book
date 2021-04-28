@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         emailField.setCorner(radius: emailField.frame.height/2)
         emailField.setBorder(width: 3, color: UIColor.brown)

@@ -22,7 +22,7 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
         // Do any additional setup after loading the view.
 //        performSegue(withIdentifier: "toChat", sender: nil)
         updateSender()
-        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.updateSender), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.updateSender), userInfo: nil, repeats: true)
     }
     
     @objc func updateSender() {
@@ -31,10 +31,13 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
         query.findObjectsInBackground { (messages: [PFObject]!, error: Error?) in
             var newSenders: [PFObject] = [PFObject]()
             for message in messages {
-                if message["receiver"] as? String == self.user?.username {
+                if message["receiver"] as? String == self.user?.username
+                    || message["senderUsername"] as? String == self.user?.username {
                     var foundMessage = false
                     for n in 0..<newSenders.count {
-                        if newSenders[n]["senderUsername"] as! String ==    message["senderUsername"] as! String {
+                        if (newSenders[n]["senderUsername"] as! String == message["senderUsername"] as! String
+                        && newSenders[n]["receiver"] as! String == message["receiver"] as! String) ||
+                            (newSenders[n]["senderUsername"] as! String == message["receiver"] as! String && newSenders[n]["receiver"] as! String == message["senderUsername"] as! String){
                             foundMessage = true
                             newSenders[n] = message
                         }
@@ -62,8 +65,12 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.messageOverView.dequeueReusableCell(withIdentifier: "MessageCell")! as! PersonMessagedCell
-        
-        cell.nameField.text = senders[indexPath.row]["user"] as? String
+        if senders[indexPath.row]["senderUsername"] as? String == user?.username {
+            let query = PFQuery.init(className: "User")
+            query.getObjectInBackground(withId: "")
+        } else {
+            cell.nameField.text = senders[indexPath.row]["user"] as? String
+        }
         cell.lastTextField.text = senders[indexPath.row]["text"] as? String
         
         return cell

@@ -43,6 +43,7 @@ class CameraPostViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         // Change look of Textfields
         bookTitleTextField.setCorner(radius: bookTitleTextField.frame.height/2)

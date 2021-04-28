@@ -336,7 +336,6 @@
                                             <outlet property="bookTitleLabel" destination="zKz-1n-MPW" id="S7N-f8-VR2"/>
                                             <outlet property="posterLabel" destination="gIW-Cy-me9" id="Jxg-3C-lJB"/>
                                             <outlet property="priceLabel" destination="qYU-UU-AyR" id="ThM-bK-qTf"/>
-                                            <outletCollection property="gestureRecognizers" destination="dtt-db-PTb" appends="YES" id="jWG-nJ-syY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -348,14 +347,10 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="44e-ar-SXT"/>
                     <connections>
                         <outlet property="tableView" destination="rVs-FL-pkV" id="jCu-q6-XBd"/>
+                        <segue destination="4ZE-Ut-dZa" kind="presentation" identifier="detailBook" id="JDD-tB-tSR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWq-kB-eSL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="dtt-db-PTb">
-                    <connections>
-                        <segue destination="4ZE-Ut-dZa" kind="show" identifier="detailBook" id="JWM-bw-hDv"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2826" y="416"/>
         </scene>
@@ -449,8 +444,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="messageButton:" destination="4ZE-Ut-dZa" eventType="touchUpInside" id="8B8-qR-aWn"/>
-                                    <segue destination="1qV-Hs-boK" kind="presentation" identifier="toChat" id="1ax-uj-VDE"/>
+                                    <action selector="messageButtonPress:" destination="4ZE-Ut-dZa" eventType="touchUpInside" id="hzK-7u-yXt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVf-xL-1Wj">
@@ -525,6 +519,7 @@
                         <outlet property="bookTitleLabel" destination="973-R0-Jh4" id="7Ou-V0-b6N"/>
                         <outlet property="descriptionLabel" destination="GGw-CF-Eue" id="ljv-1D-PkT"/>
                         <outlet property="priceLabel" destination="KVf-xL-1Wj" id="Hha-8n-r9T"/>
+                        <segue destination="1qV-Hs-boK" kind="presentation" identifier="toChat" id="ljP-8D-TOj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtY-VX-Qrn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -784,7 +779,6 @@
                                         <connections>
                                             <outlet property="lastTextField" destination="3dY-gr-LL3" id="5HH-cu-zR2"/>
                                             <outlet property="nameField" destination="mbq-uL-QPd" id="Gei-pn-tI6"/>
-                                            <outletCollection property="gestureRecognizers" destination="jzo-IW-P0x" appends="YES" id="erV-oK-KwB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -810,7 +804,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6q-fK-dSU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="jzo-IW-P0x"/>
             </objects>
             <point key="canvasLocation" x="2750.7246376811595" y="-891.29464285714278"/>
         </scene>
@@ -1071,9 +1064,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1ax-uj-VDE"/>
+        <segue reference="R0Q-qa-T0R"/>
         <segue reference="VFh-GR-1Yh"/>
-        <segue reference="JWM-bw-hDv"/>
+        <segue reference="JDD-tB-tSR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BBLogo" width="200" height="200"/>

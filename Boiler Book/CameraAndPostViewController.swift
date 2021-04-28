@@ -19,6 +19,7 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         bookTitleTextField.setCorner(radius: bookTitleTextField.frame.height/2)
         bookTitleTextField.setBorder(width: 3, color: UIColor.brown)
         
