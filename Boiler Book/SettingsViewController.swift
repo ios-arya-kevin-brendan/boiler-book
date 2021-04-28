@@ -46,8 +46,10 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func saveProfile(_ sender: Any) {
         let user = PFUser.current()!
         
-        if displayName.text != "" || displayName.text != nil {
-            user["name"] = displayName.text
+        print("saving")
+        if displayName.text != "" {
+            print("saving username")
+            user["name"] = displayName.text!
         }
         
         if changedProfilePicture {
@@ -56,15 +58,15 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
             user["profilePicture"] = file
         
-            user.saveInBackground { (success, error) in
-                self.goBack(self)
-                if success {
-                    print("saved profile picture!")
-                } else {
-                    print("error!")
-                }
+            
+        }
+        user.saveInBackground { (success, error) in
+            
+            if success {
+                self.dismiss(animated: true)
             }
         }
+        
         
     }
     

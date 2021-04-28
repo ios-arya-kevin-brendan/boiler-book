@@ -72,6 +72,15 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
         }
         cell.lastTextField.text = senders[indexPath.row]["text"] as? String
         
+//        let query = PFQuery(className: "User")
+//        print("made it here")
+//        query.findObjectsInBackground { (users: [PFObject]!, error: Error?) in
+//            for user in users {
+//                print(user.)
+//                print((user as! PFUser).username)
+//            }
+//        }
+        
         return cell
     }
     

@@ -73,7 +73,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <imageReference key="image" image="eye.slash" symbolScale="large" renderingMode="original"/>
                                 </state>
                                 <connections>
@@ -214,7 +214,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <imageReference key="image" image="eye.slash" symbolScale="large" renderingMode="original"/>
                                 </state>
                                 <connections>
@@ -522,6 +522,7 @@
                         <outlet property="descriptionLabel" destination="GGw-CF-Eue" id="ljv-1D-PkT"/>
                         <outlet property="priceLabel" destination="KVf-xL-1Wj" id="Hha-8n-r9T"/>
                         <segue destination="1qV-Hs-boK" kind="presentation" identifier="toChat" id="ljP-8D-TOj"/>
+                        <segue destination="RTN-UL-gaR" kind="presentation" identifier="toKitChat" id="48S-6g-lzm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtY-VX-Qrn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -781,6 +782,7 @@
                                         <connections>
                                             <outlet property="lastTextField" destination="3dY-gr-LL3" id="5HH-cu-zR2"/>
                                             <outlet property="nameField" destination="mbq-uL-QPd" id="Gei-pn-tI6"/>
+                                            <outlet property="profilePicture" destination="o61-Nj-Rqk" id="cVw-aE-ZOX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -813,13 +815,14 @@
         <!--Message Kit View Controller-->
         <scene sceneID="QZM-fj-8m9">
             <objects>
-                <viewController id="RTN-UL-gaR" customClass="MessageKitViewController" customModule="Boiler_Book" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="RTN-UL-gaR" customClass="MessageKitViewController" customModule="Boiler_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0sp-as-iVe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Ppk-R6-r2M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROR-mB-1v1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -933,7 +936,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-sf-nXO">
                                 <rect key="frame" x="361" y="44" width="33" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <imageReference key="image" image="gear" symbolScale="large"/>
                                 </state>
                                 <connections>
@@ -979,7 +982,7 @@
                                 <rect key="frame" x="20" y="44" width="38" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.80381719559999998" green="0.56773200030000004" blue="0.27228890449999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <imageReference key="image" image="chevron.left" symbolScale="large"/>
                                 </state>
                                 <connections>
@@ -1084,7 +1087,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="R0Q-qa-T0R"/>
-        <segue reference="VFh-GR-1Yh"/>
+        <segue reference="aTl-uT-L0F"/>
+        <segue reference="YLt-OS-gKr"/>
         <segue reference="JDD-tB-tSR"/>
     </inferredMetricsTieBreakers>
     <resources>

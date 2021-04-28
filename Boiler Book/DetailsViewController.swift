@@ -46,7 +46,7 @@ class DetailsViewController: UIViewController {
 
     @IBAction func messageButtonPress(_ sender: Any) {
         if (posterUsername != PFUser.current()?.username) {
-            performSegue(withIdentifier: "toChat", sender: self)
+            performSegue(withIdentifier: "toKitChat", sender: self)
         }
     }
     
@@ -54,6 +54,11 @@ class DetailsViewController: UIViewController {
             print("prepping segue")
         if (segue.identifier == "toChat") {
             if let chatPage = segue.destination as? MessageViewController {
+                chatPage.receiverUsername = posterUsername
+                chatPage.receiver = poster?["name"] as! String
+            }
+        } else if (segue.identifier == "toKitChat") {
+            if let chatPage = segue.destination as? MessageKitViewController {
                 chatPage.receiverUsername = posterUsername
                 chatPage.receiver = poster?["name"] as! String
             }

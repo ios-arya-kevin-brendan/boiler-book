@@ -22,12 +22,30 @@ class MessageKitViewController: MessagesViewController, MessagesDataSource, Mess
         
     }
     
+    func setUpNavBar() {
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 45, width: UIScreen.main.bounds.width, height: 70))
+        self.view.addSubview(navBar)
+        navBar.items?.append(UINavigationItem(title: receiver!))
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(leavePage))
+        navBar.topItem?.leftBarButtonItem = backButton
+//        messagesCollectionView.insertSubview(navBar, at: 0)
+    }
+    
+    @objc func leavePage() {
+        self.dismiss(animated: true)
+    }
+    
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
         let message = messageList[indexPath.section]
         let sender = KitUser(id: message["senderUsername"] as! String, name: message["sender"] as! String)
+        
         return KitMessage(kind: MessageKind.text(message["text"] as! String), user: sender, messageId: String(indexPath.section), date: (message.createdAt)!)
         
+    }
+    
+    func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        return isFromCurrentSender(message: message) ? UIColor.brown : UIColor.gray
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
@@ -57,14 +75,27 @@ class MessageKitViewController: MessagesViewController, MessagesDataSource, Mess
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        messagesCollectionView.contentInset = UIEdgeInsets(top: 55, left: 0, bottom: 0, right: 0)
+        setUpNavBar()
+        
         loadMessages()
         Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.loadMessages), userInfo: nil, repeats: true)
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+
+        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+        layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
+        layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+        }
         
         messageInputBar.delegate = self
+        
+        
+        
+
+        
         // Do any additional setup after loading the view.
     }
 
@@ -82,6 +113,7 @@ extension MessageKitViewController: InputBarAccessoryViewDelegate {
         chatMessage["sender"] = PFUser.current()!["name"]
         chatMessage["receiverUsername"] = receiverUsername
         chatMessage["receiver"] = receiver
+        chatMessage["profilePicture"] = PFUser.current()!["profilePicture"]
         
         
         chatMessage.saveInBackground { (success, error) in
