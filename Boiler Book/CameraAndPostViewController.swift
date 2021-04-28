@@ -17,6 +17,9 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     
+    
+    @IBOutlet weak var subjectTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -28,6 +31,11 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
         
         priceTextField.setCorner(radius: priceTextField.frame.height/2)
         priceTextField.setBorder(width: 3, color: UIColor.brown)
+        
+        
+        subjectTextField.setCorner(radius: subjectTextField.frame.height/2)
+        subjectTextField.setBorder(width: 3, color: UIColor.brown)
+        
         
         descriptionTextField.setCorner(radius: descriptionTextField.frame.height/8)
         descriptionTextField.setBorder(width: 3, color: UIColor.brown)
@@ -43,7 +51,7 @@ class CameraAndPostViewController: UIViewController,UIImagePickerControllerDeleg
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(name: "postImage.png", data: imageData!)
         post["image"] = file
-        post["subject"] = "CS180"
+        post["subject"] = subjectTextField.text!
         post["price"] = priceTextField.text!
         post["posterUsername"] = PFUser.current()?.username
         

@@ -11,6 +11,8 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var text:String = ""
+    
 
     var filteredClasses: [Class] = []
     var classes: [Class] = []
@@ -58,8 +60,10 @@ class SearchViewController: UIViewController {
         let class_: Class
         if isFiltering {
             class_ = filteredClasses[indexPath.row]
+            detailViewController.text = class_.name
         } else {
             class_ = classes[indexPath.row]
+            detailViewController.text = class_.name
         }
       //detailViewController.class_ = class_
     }

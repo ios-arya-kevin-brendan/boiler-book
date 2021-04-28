@@ -12,6 +12,7 @@ class PersonMessagedCell: UITableViewCell {
     @IBOutlet weak var nameField: UILabel!
     @IBOutlet weak var lastTextField: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
+    var ppAdded = false
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -18,6 +18,7 @@
 		D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D604C32C260BF77400606B3A /* ProfileViewController.swift */; };
 		D61AF81B263961F700365545 /* MessageKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61AF81A263961F700365545 /* MessageKitViewController.swift */; };
 		D6402B8E26128ED300CF9434 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6402B8D26128ED300CF9434 /* SettingsViewController.swift */; };
+		D6942F1B2639D1DE00130FA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6942F1A2639D1DD00130FA4 /* MapViewController.swift */; };
 		D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8A6260BEDE5007F2329 /* AppDelegate.swift */; };
 		D6CBC8A9260BEDE5007F2329 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8A8260BEDE5007F2329 /* SceneDelegate.swift */; };
 		D6CBC8AB260BEDE5007F2329 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CBC8AA260BEDE5007F2329 /* ViewController.swift */; };
@@ -76,6 +77,7 @@
 		D604C32C260BF77400606B3A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D61AF81A263961F700365545 /* MessageKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKitViewController.swift; sourceTree = "<group>"; };
 		D6402B8D26128ED300CF9434 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D6942F1A2639D1DD00130FA4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D6CBC8A3260BEDE5007F2329 /* Boiler Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boiler Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CBC8A6260BEDE5007F2329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6CBC8A8260BEDE5007F2329 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				E9CA75672628FF9E00736861 /* SearchViewController.swift */,
 				D6402B8D26128ED300CF9434 /* SettingsViewController.swift */,
 				D6CBC8AA260BEDE5007F2329 /* ViewController.swift */,
+				D6942F1A2639D1DD00130FA4 /* MapViewController.swift */,
 			);
 			path = "Boiler Book";
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				D6CBC8AB260BEDE5007F2329 /* ViewController.swift in Sources */,
 				E9CA757226290D7500736861 /* DetailSearchViewController.swift in Sources */,
 				D604C32D260BF77400606B3A /* ProfileViewController.swift in Sources */,
+				D6942F1B2639D1DE00130FA4 /* MapViewController.swift in Sources */,
 				E9CA75682628FF9E00736861 /* SearchViewController.swift in Sources */,
 				E9CA757F2629194300736861 /* DetailSearchTableViewCell.swift in Sources */,
 				D6CBC8A7260BEDE5007F2329 /* AppDelegate.swift in Sources */,

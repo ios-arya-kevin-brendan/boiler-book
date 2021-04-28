@@ -65,20 +65,44 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.messageOverView.dequeueReusableCell(withIdentifier: "MessageCell")! as! PersonMessagedCell
+        
+        var userToGet: String
         if senders[indexPath.row]["senderUsername"] as? String == user?.username {
             cell.nameField.text = senders[indexPath.row]["receiver"] as? String
+            userToGet = (senders[indexPath.row]["receiverUsername"] as? String)!
         } else {
             cell.nameField.text = senders[indexPath.row]["sender"] as? String
+            userToGet = (senders[indexPath.row]["senderUsername"] as? String)!
         }
         cell.lastTextField.text = senders[indexPath.row]["text"] as? String
         
-//        let query = PFQuery(className: "User")
+        let findUsers:PFQuery = PFUser.query()!;
+        findUsers.whereKey("username",  equalTo: userToGet)
+//        print(userToGet)
+        findUsers.findObjectsInBackground { (user: [PFObject]?, error: Error?) in
+//            print(user)
+            if !cell.ppAdded {
+                let rawImageFile = (user![0] as! PFUser)["profilePicture"]
+                if rawImageFile != nil {
+                    let imageFile = rawImageFile as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                
+                    cell.profilePicture.af.setImage(withURL: url)
+                    cell.profilePicture.layer.cornerRadius = cell.profilePicture.bounds.width/2
+                    cell.ppAdded = true
+                }
+            }
+        }
+        
+//        let query = PFQuery(
 //        print("made it here")
-//        query.findObjectsInBackground { (users: [PFObject]!, error: Error?) in
-//            for user in users {
-//                print(user.)
-//                print((user as! PFUser).username)
-//            }
+//        query.findObjectsInBackground { (users: [PFObject]?, error: Error?) in
+//            print(users)
+////            for user in users {
+////                print(user)
+////                print((user as! PFUser).username)
+////            }
 //        }
         
         return cell

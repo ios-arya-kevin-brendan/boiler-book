@@ -13,6 +13,9 @@ import AlamofireImage
 class DetailSearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 
+    
+    
+    var text:String = ""
 
     @IBOutlet var tableView: UITableView!
     var classes = [PFObject]()
@@ -34,7 +37,9 @@ class DetailSearchViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidAppear(animated)
         let query = PFQuery(className: "userPost")
         //query.selectKeys(["subject"])
-        query.includeKey("poster")
+        //query.includeKey("poster")
+        
+        query.whereKey("subject", contains: text)
         
         query.findObjectsInBackground { (classes, error) in
             if classes != nil {
