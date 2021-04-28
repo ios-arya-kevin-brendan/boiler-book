@@ -61,6 +61,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.bookPhoto.af.setImage(withURL: url)
         
+        if indexPath.row % 2 == 0 {
+            cell.backgroundCell.backgroundColor = .brown
+        } else {
+            cell.backgroundCell.backgroundColor = .gray
+        }
+        
+        cell.backgroundColor = .black
+        cell.authorLabel.textColor = .white
+        cell.priceLabel.textColor = .white
+        cell.posterLabel.textColor = .white
+        cell.bookTitleLabel.textColor = .white
+        self.tableView.rowHeight = 300
+        
         
         
         return cell

@@ -24,6 +24,7 @@ class DetailsViewController: UIViewController {
     var imageFile: PFFileObject?
     
     var posterUsername: String = "error"
+    var posterName: String = "error"
 
     var posts = [PFObject]()
     
@@ -39,6 +40,13 @@ class DetailsViewController: UIViewController {
         let urlString = imageFile?.url ?? "https://i.imgur.com/mCHMpLT.png"
         let url = URL(string: urlString)!
         bookImageView.af.setImage(withURL: url)
+        
+        let findUsers:PFQuery = PFUser.query()!;
+        findUsers.whereKey("username",  equalTo: posterUsername)
+//        print(userToGet)
+        findUsers.findObjectsInBackground { (users: [PFObject]?, error: Error?) in
+            self.posterName = ((users![0] as! PFUser)["name"] as? String)!
+        }
         
         print(posterUsername)
     }
@@ -60,7 +68,7 @@ class DetailsViewController: UIViewController {
         } else if (segue.identifier == "toKitChat") {
             if let chatPage = segue.destination as? MessageKitViewController {
                 chatPage.receiverUsername = posterUsername
-                chatPage.receiver = poster?["name"] as? String
+                chatPage.receiver = posterName
             }
         }
         print("finished prepping")

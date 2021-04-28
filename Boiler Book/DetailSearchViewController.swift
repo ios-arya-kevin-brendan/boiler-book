@@ -77,7 +77,7 @@ class DetailSearchViewController: UIViewController, UITableViewDelegate, UITable
     
     
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "individualPost", sender: indexPath)
+        performSegue(withIdentifier: "individualPost", sender: indexPath)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,7 +107,7 @@ class DetailSearchViewController: UIViewController, UITableViewDelegate, UITable
             
             print("completed segue")
         }
-        viewWillAppear(true)
+//        viewWillAppear(true)
         
         
     }

@@ -119,17 +119,24 @@ class SearchViewController: UIViewController {
         
         if indexPath.row % 2 == 0 {
            // cell.backgroundCell.backgroundColor = .yellow
-            cell.backgroundCell.backgroundColor = UIColor(red: 0.8078, green: 0.721568, blue: 0.5333, alpha: 1)
+            //cell.backgroundCell.backgroundColor = UIColor(red: 0.8078, green: 0.721568, blue: 0.5333, alpha: 1)
             //cell.backgroundColor = .black
+            cell.backgroundCell.backgroundColor = .brown
         } else {
-            cell.backgroundCell.backgroundColor = .black
+            //cell.backgroundCell.backgroundColor = .black
            // cell.backgroundColor = UIColor(red: 0.8078, green: 0.721568, blue: 0.55294, alpha: 1)
 
-            cell.title.textColor = .white
-            cell.subtitle.textColor = .white
+            
+            cell.backgroundCell.backgroundColor = .gray
+
+
 
         }
-        cell.backgroundColor = UIColor(red: 0.615686, green: 0.588235, blue: 0.5333, alpha: 1)
+        
+        cell.title.textColor = .white
+        cell.subtitle.textColor = .white
+        
+        cell.backgroundColor = .black
         
       return cell
 
