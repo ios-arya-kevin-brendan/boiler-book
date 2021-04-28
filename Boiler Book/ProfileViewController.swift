@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var settingsButton: UIButton!
     
+    @IBOutlet weak var nameField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +26,7 @@ class ProfileViewController: UIViewController {
         
             profileImage.af.setImage(withURL: url)
         }
+        nameField.text = user["name"] as? String
         profileImage.layer.cornerRadius = profileImage.bounds.width/2
         // Do any additional setup after loading the view.
     }

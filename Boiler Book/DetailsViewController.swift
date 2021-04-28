@@ -26,6 +26,8 @@ class DetailsViewController: UIViewController {
     var posterUsername: String = "error"
 
     var posts = [PFObject]()
+    
+    var poster: PFUser?
 
 
     override func viewDidLoad() {
@@ -43,14 +45,17 @@ class DetailsViewController: UIViewController {
     
 
     @IBAction func messageButtonPress(_ sender: Any) {
-        performSegue(withIdentifier: "toChat", sender: self)
+        if (posterUsername != PFUser.current()?.username) {
+            performSegue(withIdentifier: "toChat", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             print("prepping segue")
         if (segue.identifier == "toChat") {
             if let chatPage = segue.destination as? MessageViewController {
-                chatPage.receiver = posterUsername
+                chatPage.receiverUsername = posterUsername
+                chatPage.receiver = poster?["name"] as! String
             }
         }
         print("finished prepping")

@@ -931,6 +931,7 @@
                         <imageReference key="image" image="person" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="nameField" destination="eFC-28-uSb" id="7yx-F5-eWS"/>
                         <outlet property="profileImage" destination="bhJ-IY-dVG" id="HHh-A2-O0n"/>
                         <outlet property="settingsButton" destination="gMe-sf-nXO" id="XLK-Cy-aUJ"/>
                     </connections>

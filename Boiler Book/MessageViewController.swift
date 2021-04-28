@@ -16,6 +16,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var messageInput: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     var receiver: String = "error"
+    var receiverUsername: String = "error"
     let user = PFUser.current()
     
     var parseMessages: [PFObject] = []
@@ -45,7 +46,8 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         let chatMessage = PFObject(className: "Message")
         chatMessage["text"] = messageInput.text ?? ""
         chatMessage["senderUsername"] = PFUser.current()?.username
-        chatMessage["user"] = PFUser.current()!["name"]
+        chatMessage["sender"] = PFUser.current()!["name"]
+        chatMessage["receiverUsername"] = receiverUsername
         chatMessage["receiver"] = receiver
         
         chatMessage.saveInBackground { (success, error) in
@@ -66,9 +68,9 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         query.findObjectsInBackground { (messages: [PFObject]!, error: Error?) in
             var newMessages: [PFObject] = [PFObject]()
             for message in messages {
-                if (message["receiver"] as? String == self.user?.username
-                    && message["senderUsername"] as? String == self.receiver)
-                    || (message["receiver"] as? String == self.receiver
+                if (message["receiverUsername"] as? String == self.user?.username
+                    && message["senderUsername"] as? String == self.receiverUsername)
+                    || (message["receiverUsername"] as? String == self.receiverUsername
                     && message["senderUsername"] as? String == self.user?.username) {
                 newMessages.append(message)
                 }
@@ -92,7 +94,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         if parseMessages[indexPath.row]["senderUsername"] as? String == PFUser.current()?.username {
-
+            
             cell.messageContent.textAlignment = .right
         } else {
             cell.messageContent.textAlignment = .left

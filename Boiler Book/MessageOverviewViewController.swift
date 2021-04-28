@@ -31,13 +31,13 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
         query.findObjectsInBackground { (messages: [PFObject]!, error: Error?) in
             var newSenders: [PFObject] = [PFObject]()
             for message in messages {
-                if message["receiver"] as? String == self.user?.username
+                if message["receiverUsername"] as? String == self.user?.username
                     || message["senderUsername"] as? String == self.user?.username {
                     var foundMessage = false
                     for n in 0..<newSenders.count {
                         if (newSenders[n]["senderUsername"] as! String == message["senderUsername"] as! String
-                        && newSenders[n]["receiver"] as! String == message["receiver"] as! String) ||
-                            (newSenders[n]["senderUsername"] as! String == message["receiver"] as! String && newSenders[n]["receiver"] as! String == message["senderUsername"] as! String){
+                        && newSenders[n]["receiverUsername"] as! String == message["receiverUsername"] as! String) ||
+                            (newSenders[n]["senderUsername"] as! String == message["receiverUsername"] as! String && newSenders[n]["receiverUsername"] as! String == message["senderUsername"] as! String){
                             foundMessage = true
                             newSenders[n] = message
                         }
@@ -66,10 +66,9 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.messageOverView.dequeueReusableCell(withIdentifier: "MessageCell")! as! PersonMessagedCell
         if senders[indexPath.row]["senderUsername"] as? String == user?.username {
-            let query = PFQuery.init(className: "User")
-            query.getObjectInBackground(withId: "")
+            cell.nameField.text = senders[indexPath.row]["receiver"] as? String
         } else {
-            cell.nameField.text = senders[indexPath.row]["user"] as? String
+            cell.nameField.text = senders[indexPath.row]["sender"] as? String
         }
         cell.lastTextField.text = senders[indexPath.row]["text"] as? String
         
@@ -86,6 +85,13 @@ class MessageOverviewViewController: UIViewController, UITableViewDelegate, UITa
         if (segue.identifier == "toChat") {
             let chatPage = segue.destination as! MessageViewController
             chatPage.receiver = senders[sender as! Int]["senderUsername"] as! String
+            if (senders[sender as! Int]["senderUsername"] as! String) == user?.username {
+                chatPage.receiver = senders[sender as! Int]["receiver"] as! String
+                chatPage.receiverUsername = senders[sender as! Int]["receiverUsername"] as! String
+            } else {
+                chatPage.receiver = senders[sender as! Int]["sender"] as! String
+                chatPage.receiverUsername = senders[sender as! Int]["senderUsername"] as! String
+            }
         }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
