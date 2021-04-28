@@ -60,7 +60,7 @@ class DetailsViewController: UIViewController {
         } else if (segue.identifier == "toKitChat") {
             if let chatPage = segue.destination as? MessageKitViewController {
                 chatPage.receiverUsername = posterUsername
-                chatPage.receiver = poster?["name"] as! String
+                chatPage.receiver = poster?["name"] as? String
             }
         }
         print("finished prepping")

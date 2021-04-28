@@ -238,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="141" y="839"/>
         </scene>
-        <!--Item 2-->
+        <!--Feed View Controller-->
         <scene sceneID="YAZ-4O-xCT">
             <objects>
                 <viewController id="9Ri-pP-dcV" customClass="FeedViewController" customModule="Boiler_Book" customModuleProvider="target" sceneMemberID="viewController">
@@ -346,7 +346,7 @@
                         <viewLayoutGuide key="safeArea" id="Fme-VD-zPa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="44e-ar-SXT"/>
+                    <tabBarItem key="tabBarItem" title="" image="network" catalog="system" id="44e-ar-SXT"/>
                     <connections>
                         <outlet property="tableView" destination="rVs-FL-pkV" id="jCu-q6-XBd"/>
                         <segue destination="4ZE-Ut-dZa" kind="presentation" identifier="detailBook" id="JDD-tB-tSR"/>
@@ -1132,8 +1132,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R0Q-qa-T0R"/>
-        <segue reference="aTl-uT-L0F"/>
+        <segue reference="ljP-8D-TOj"/>
+        <segue reference="48S-6g-lzm"/>
         <segue reference="YLt-OS-gKr"/>
         <segue reference="4xK-ZQ-qgf"/>
     </inferredMetricsTieBreakers>
@@ -1148,6 +1148,7 @@
         <image name="image_placeholder" width="600" height="409"/>
         <image name="lock" width="9" height="13"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="network" catalog="system" width="128" height="121"/>
         <image name="person" width="11" height="12"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
