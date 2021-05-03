@@ -21,7 +21,6 @@ Arya
 FINAL PRODUCT:
 https://www.youtube.com/watch?v=GInS1VTb0MQ
 
-<img src="http://g.recordit.co/0n12Fhwq44.gif" width=250><br>
 
 ## Overview
 ### Description
@@ -146,6 +145,10 @@ This app is a buying and selling app for textbooks between students at Purdue Un
 
 
 ##FINAL SPRINT
+
+
+<img src="http://g.recordit.co/0n12Fhwq44.gif" width=250><br>
+
 Project Board Issues
  - Merging branch from Kevin to main not working, therefore missing the finished profile and messages
 
